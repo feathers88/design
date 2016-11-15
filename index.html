@@ -1,0 +1,518 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <title>Windows Insiders</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Example page structure on Microsoft Web Framework">
+    <meta name="keywords" content="Development Site">
+    <meta name="author" content="Microsoft Corporation">
+    <!-- Meta additions -->
+
+
+    <!-- Visit the CDN documentation to learn about versions. -->
+    <!--<link rel="stylesheet" href="//assets.onestore.ms/cdnfiles/external/mwf/long/v1/v1.15.0/css/mwf-west-european-default.min.css">-->
+    <link rel="stylesheet" href="//assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/css/mwf-west-european-default.css">
+
+    <!-- Stylesheet requirements -->
+    <link rel="stylesheet" href="css/default.css">
+
+    <script src="http://getmwf.com/scripts/vendor/modernizr.min.js"></script>
+    <script>
+	if (navigator.userAgent.indexOf("Trident") < 0 && navigator.userAgent.indexOf("Edge") < 0 && navigator.userAgent.indexOf("MSIE") < 0) {
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.src = 'http://getmwf.com/local/scripts/vendor/prism.js';
+            head.appendChild(script);
+        }
+	</script>
+    <!-- Stylesheet additions -->
+
+    <!-- Include as a single optimized css file on CDN. -->
+    <!-- ... -->
+</head>
+
+<body style="overflow: auto;">
+    <!-- Accessibility requirement -->
+    <a class="m-skip-to-main" href="#mainContent" tabindex="0">Skip to main content</a>
+
+    <!-- Universal header -->
+    <nav>
+        <section id="headerArea" role="Header">
+            <div id="headerRegion">
+
+                <div id="headerUniversalHeader">
+
+                    <header class="c-universal-header context-uhf f-transparent js" itemscope="itemscope" itemtype="http://schema.org/Organization">
+                        <div class="theme-dark js-global-head f-closed f-transparent" ms.pgarea="Universal Header">
+                            <div>
+                                <button class="c-action-trigger c-glyph glyph-global-nav-button" aria-label="Toggle menu" aria-expanded="false" ms.title="Mobile menu button"></button>
+                                <div class="f-mobile-title">
+                                    <button class="c-action-trigger c-glyph glyph-chevron-left" aria-label="See more menu options" ms.title="Mobile back button"></button>
+                                    <span data-global-title="Microsoft home" class="js-mobile-title">Web framework</span>
+                                    <button class="c-action-trigger c-glyph glyph-chevron-right" aria-label="See more menu options" ms.title="Mobile forward button"></button>
+                                </div>
+                                <button class="c-action-trigger c-glyph glyph-arrow-htmllegacy" aria-expanded="false" ms.title="Close Search"></button>
+                                <a class="c-logo" itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" ms.title="Microsoft">
+                                    <img itemprop="logo" itemscope="itemscope" class="c-image" alt="Microsoft" src="http://getmwf.com/images/components/universal-header/microsoft-logo-dark.png">
+                                    <span>Microsoft</span>
+                                </a>
+
+                                <nav id="uhf-g-nav" ms.pgarea="Global nav">
+                                    <ul>
+                                        <!--<li>
+                                            <div class="c-select-menu js-nav-menu">
+                                                <button id="Home-navigation" aria-expanded="false" aria-haspopup="true" ms.title="Home" ms.interactiontype="14" style="white-space:nowrap">Home</button>
+                                            </div>
+                                        </li>
+                                       -->
+                                        <li>
+                                            <a class="c-hyperlink" href="/">Home</a>
+                                        </li>
+
+                                        <li>
+                                            <a class="c-hyperlink" href="/">About</a>
+                                        </li>
+
+                                        <li>
+                                            <a class="c-hyperlink" href="/">Contact</a>
+                                        </li>
+                                    </ul>
+
+                                </nav>
+
+
+                            </div>
+
+
+                        </div>
+                        <div class="theme-dark f-transparent js-cat-head" itemprop="brand" itemscope="itemscope" itemtype="http://schema.org/Brand"
+                            ms.cmpgrp="UHF category nav">
+
+                            <div>
+                                <a class="c-logo" href="/" aria-label="Web framework" itemprop="url" ms.title="Widows Insiders">
+                                    <span>Windows Insiders</span>
+                                </a>
+
+                                <button class="c-action-trigger c-glyph glyph-chevron-left" aria-label="" ms.title="Previous" tabindex="-1" style="display: none;"></button>
+
+                                <button class="c-action-trigger c-glyph glyph-chevron-right" aria-label="" ms.title="Next" tabindex="-1" style="display: none;"></button>
+                                <nav id="uhf-c-nav">
+                                    <a class="c-hyperlink" href="/getting-started.html" ms.title="Events">News</a>
+                                    <a class="c-hyperlink" href="/getting-started.html" ms.title="Events">Community's</a>
+                                    <a class="c-hyperlink" href="/getting-started.html" ms.title="Events">Events</a>
+                                    <a class="c-hyperlink" href="/getting-started.html" ms.title="Events">Find an MVP</a>
+                                </nav>
+
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </section>
+
+    </nav>
+
+    <noscript>&lt;div class="c-alert f-information" role="alert"&gt;&lt;div&gt;&lt;div class="c-glyph glyph-warning" aria-label="Warning
+        message"&gt;&lt;/div&gt;&lt;p class="c-paragraph"&gt;Because your browser does not support JavaScript you are missing
+        out on on some great image optimizations allowing this page to load faster.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</noscript>
+
+    <!-- Main page content should be wrapped with semantically meaningful html elements (e.g.: article, main) whenever possible. A div element can be used as long as it also contains a role="main" for Accessibility. -->
+    <main id="mainContent">
+        <section class="m-typographic-intro f-background-neutral-100 f-transparent">
+            <div>
+                <div>
+                    <h1 class="c-heading">What are windows insiders?</h1>
+                    <p class="c-subheading">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, elit non scelerisque ullamcorper, sapien ligula sollicitudin
+                        arcu, eget viverra mi ex et ante. Fusce tristique massa et quam pretium lobortis a nec ante. Vivamus
+                        quis leo felis. Duis nisi sapien, fringilla at magna a, ultrices viverra orci. Aliquam ut libero
+                        fermentum, convallis odio vel, vestibulum neque. Mauris erat ligula, vestibulum a gravida vel, porta
+                        sit amet quam. Aliquam convallis ipsum nec purus lobortis, eu suscipit dolor fermentum. Mauris a
+                        vestibulum metus. Nullam diam ligula, dictum vitae magna at, maximus consectetur orci. Donec malesuada
+                        enim condimentum posuere tempus. Vestibulum nec nulla justo. Praesent elementum tincidunt fermentum.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent
+                        dignissim dapibus tincidunt. Sed ex ipsum, eleifend ac mi quis, commodo egestas nulla.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div data-grid="container">
+
+            <div data-grid="col-12" class="m-mwf-workflow-overview">
+
+                <div data-grid="col-12 stack-2" class="m-mwf-workflow-item">
+                    <div data-grid="col-10">
+                        News
+                    </div>
+                    <div data-grid="col-2">
+                        Upcomming events
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="m-product-placement f-software" data-grid="col-12">
+                <h2 class="c-heading-4">
+                    <span aria-hidden="true">Windows Insiders</span>
+                    <a href="" class="c-hyperlink" aria-label="Show all">Show all</a>
+                </h2>
+                <div class="c-carousel f-single-slide" role="region" aria-label="">
+                    <button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
+                    <button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
+                    <div itemscope itemtype="http://schema.org/ItemList">
+                        <ul class="c-group">
+                            <li>
+                                <section class="m-product-placement-item f-size-large context-software" itemscope itemtype="http://schema.org/Product">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="http://placehold.it/272x223" media="(min-width:0)">
+                                            <img class="c-image" srcset="http://placehold.it/272x223" src="http://placehold.it/272x223" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                        </picture>
+                                        <div>
+                                            <span class="c-badge f-small f-highlight">MVP</span>
+                                            <span class="c-badge f-small f-highlight">Community Leader</span>
+                                            <h3 class="c-heading" itemprop="product name">Joris Brauns</h3>
+                                            <div class="c-rating f-community-rated f-aggregate" itemscope itemtype="https://schema.org/Rating">
+                                                Belgium
+                                            </div>
+                                            <p class="c-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet turpis
+                                                ut nibh varius, eget blandit sem blandit.</p>
+                                        </div>
+                                    </a>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="m-product-placement-item f-size-large context-software" itemscope itemtype="http://schema.org/Product">
+                                    <a href="#">
+                                        <div class="f-default-image">
+                                            <picture>
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:540px)">
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:0)">
+                                                <img class="c-image" srcset="/images/content-images/app-glyph-default-large.png" src="/images/content-images/app-glyph-default-large.png"
+                                                    alt="Three boxes in a square with grey background" onerror="handleImgError(this, 'large')">
+                                            </picture>
+                                        </div>
+                                        <div>
+                                            <span class="c-badge f-small f-highlight">Community Leader</span>
+                                            <h3 class="c-heading" itemprop="product name">Tim Sommer</h3>
+                                            <div class="c-rating f-community-rated f-aggregate" itemscope itemtype="https://schema.org/Rating">
+                                                Belgium
+                                            </div>
+                                            <p class="c-paragraph">Lorem ipsum dolor sit amet.</p>
+                                        </div>
+                                    </a>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="m-product-placement-item f-size-large context-software" itemscope itemtype="http://schema.org/Product">
+                                    <a href="#">
+                                        <div class="f-default-image">
+                                            <picture>
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:540px)">
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:0)">
+                                                <img class="c-image" srcset="/images/content-images/app-glyph-default-large.png" src="/images/content-images/app-glyph-default-large.png"
+                                                    alt="Three boxes in a square with grey background" onerror="handleImgError(this, 'large')">
+                                            </picture>
+                                        </div>
+                                        <div>
+                                            <span class="c-badge f-small f-highlight">BADGE</span>
+                                            <h3 class="c-heading" itemprop="product name">Heading</h3>
+                                            <div class="c-rating f-community-rated f-aggregate" itemscope itemtype="https://schema.org/Rating">
+                                                <p class="x-screen-reader">Rating:
+                                                    <span itemprop="ratingValue">4</span>/
+                                                    <span itemprop="bestRating">5</span>
+                                                </p>
+                                                <div aria-hidden="true">
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-none"></span>
+                                                </div>
+                                            </div>
+                                            <div class="c-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                                <meta itemprop="priceCurrency" content="USD">
+                                                <span>$</span>
+                                                <span itemprop="price">500</span>
+                                                <link itemprop="availability" href="http://schema.org/InStock">
+                                            </div>
+                                            <p class="c-paragraph">Lorem ipsum dolor sit amet.</p>
+                                        </div>
+                                    </a>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="m-product-placement-item f-size-large context-software" itemscope itemtype="http://schema.org/Product">
+                                    <a href="#">
+                                        <div class="f-default-image">
+                                            <picture>
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:540px)">
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:0)">
+                                                <img class="c-image" srcset="/images/content-images/app-glyph-default-large.png" src="/images/content-images/app-glyph-default-large.png"
+                                                    alt="Three boxes in a square with grey background" onerror="handleImgError(this, 'large')">
+                                            </picture>
+                                        </div>
+                                        <div>
+                                            <span class="c-badge f-small f-highlight">BADGE</span>
+                                            <h3 class="c-heading" itemprop="product name">Heading</h3>
+                                            <div class="c-rating f-community-rated f-aggregate" itemscope itemtype="https://schema.org/Rating">
+                                                <p class="x-screen-reader">Rating:
+                                                    <span itemprop="ratingValue">4</span>/
+                                                    <span itemprop="bestRating">5</span>
+                                                </p>
+                                                <div aria-hidden="true">
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-none"></span>
+                                                </div>
+                                            </div>
+                                            <div class="c-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                                <meta itemprop="priceCurrency" content="USD">
+                                                <span>$</span>
+                                                <span itemprop="price">500</span>
+                                                <link itemprop="availability" href="http://schema.org/InStock">
+                                            </div>
+                                            <p class="c-paragraph">Lorem ipsum dolor sit amet.</p>
+                                        </div>
+                                    </a>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="m-product-placement-item f-size-large context-software" itemscope itemtype="http://schema.org/Product">
+                                    <a href="#">
+                                        <div class="f-default-image">
+                                            <picture>
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:540px)">
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:0)">
+                                                <img class="c-image" srcset="/images/content-images/app-glyph-default-large.png" src="/images/content-images/app-glyph-default-large.png"
+                                                    alt="Three boxes in a square with grey background" onerror="handleImgError(this, 'large')">
+                                            </picture>
+                                        </div>
+                                        <div>
+                                            <span class="c-badge f-small f-highlight">BADGE</span>
+                                            <h3 class="c-heading" itemprop="product name">Heading</h3>
+                                            <div class="c-rating f-community-rated f-aggregate" itemscope itemtype="https://schema.org/Rating">
+                                                <p class="x-screen-reader">Rating:
+                                                    <span itemprop="ratingValue">4</span>/
+                                                    <span itemprop="bestRating">5</span>
+                                                </p>
+                                                <div aria-hidden="true">
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-none"></span>
+                                                </div>
+                                            </div>
+                                            <div class="c-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                                <meta itemprop="priceCurrency" content="USD">
+                                                <span>$</span>
+                                                <span itemprop="price">500</span>
+                                                <link itemprop="availability" href="http://schema.org/InStock">
+                                            </div>
+                                            <p class="c-paragraph">Lorem ipsum dolor sit amet.</p>
+                                        </div>
+                                    </a>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="m-product-placement-item f-size-large context-software" itemscope itemtype="http://schema.org/Product">
+                                    <a href="#">
+                                        <div class="f-default-image">
+                                            <picture>
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:540px)">
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:0)">
+                                                <img class="c-image" srcset="/images/content-images/app-glyph-default-large.png" src="/images/content-images/app-glyph-default-large.png"
+                                                    alt="Three boxes in a square with grey background" onerror="handleImgError(this, 'large')">
+                                            </picture>
+                                        </div>
+                                        <div>
+                                            <span class="c-badge f-small f-highlight">BADGE</span>
+                                            <h3 class="c-heading" itemprop="product name">Heading</h3>
+                                            <div class="c-rating f-community-rated f-aggregate" itemscope itemtype="https://schema.org/Rating">
+                                                <p class="x-screen-reader">Rating:
+                                                    <span itemprop="ratingValue">4</span>/
+                                                    <span itemprop="bestRating">5</span>
+                                                </p>
+                                                <div aria-hidden="true">
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-none"></span>
+                                                </div>
+                                            </div>
+                                            <div class="c-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                                <meta itemprop="priceCurrency" content="USD">
+                                                <span>$</span>
+                                                <span itemprop="price">500</span>
+                                                <link itemprop="availability" href="http://schema.org/InStock">
+                                            </div>
+                                            <p class="c-paragraph">Lorem ipsum dolor sit amet.</p>
+                                        </div>
+                                    </a>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="m-product-placement-item f-size-large context-software" itemscope itemtype="http://schema.org/Product">
+                                    <a href="#">
+                                        <div class="f-default-image">
+                                            <picture>
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:540px)">
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:0)">
+                                                <img class="c-image" srcset="/images/content-images/app-glyph-default-large.png" src="/images/content-images/app-glyph-default-large.png"
+                                                    alt="Three boxes in a square with grey background" onerror="handleImgError(this, 'large')">
+                                            </picture>
+                                        </div>
+                                        <div>
+                                            <span class="c-badge f-small f-highlight">BADGE</span>
+                                            <h3 class="c-heading" itemprop="product name">Heading</h3>
+                                            <div class="c-rating f-community-rated f-aggregate" itemscope itemtype="https://schema.org/Rating">
+                                                <p class="x-screen-reader">Rating:
+                                                    <span itemprop="ratingValue">4</span>/
+                                                    <span itemprop="bestRating">5</span>
+                                                </p>
+                                                <div aria-hidden="true">
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-none"></span>
+                                                </div>
+                                            </div>
+                                            <div class="c-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                                <meta itemprop="priceCurrency" content="USD">
+                                                <span>$</span>
+                                                <span itemprop="price">500</span>
+                                                <link itemprop="availability" href="http://schema.org/InStock">
+                                            </div>
+                                            <p class="c-paragraph">Lorem ipsum dolor sit amet.</p>
+                                        </div>
+                                    </a>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="m-product-placement-item f-size-large context-software" itemscope itemtype="http://schema.org/Product">
+                                    <a href="#">
+                                        <div class="f-default-image">
+                                            <picture>
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:540px)">
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:0)">
+                                                <img class="c-image" srcset="/images/content-images/app-glyph-default-large.png" src="/images/content-images/app-glyph-default-large.png"
+                                                    alt="Three boxes in a square with grey background" onerror="handleImgError(this, 'large')">
+                                            </picture>
+                                        </div>
+                                        <div>
+                                            <span class="c-badge f-small f-highlight">BADGE</span>
+                                            <h3 class="c-heading" itemprop="product name">Heading</h3>
+                                            <div class="c-rating f-community-rated f-aggregate" itemscope itemtype="https://schema.org/Rating">
+                                                <p class="x-screen-reader">Rating:
+                                                    <span itemprop="ratingValue">4</span>/
+                                                    <span itemprop="bestRating">5</span>
+                                                </p>
+                                                <div aria-hidden="true">
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-none"></span>
+                                                </div>
+                                            </div>
+                                            <div class="c-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                                <meta itemprop="priceCurrency" content="USD">
+                                                <span>$</span>
+                                                <span itemprop="price">500</span>
+                                                <link itemprop="availability" href="http://schema.org/InStock">
+                                            </div>
+                                            <p class="c-paragraph">Lorem ipsum dolor sit amet.</p>
+                                        </div>
+                                    </a>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="m-product-placement-item f-size-large context-software" itemscope itemtype="http://schema.org/Product">
+                                    <a href="#">
+                                        <div class="f-default-image">
+                                            <picture>
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:540px)">
+                                                <source srcset="/images/content-images/app-glyph-default-large.png" media="(min-width:0)">
+                                                <img class="c-image" srcset="/images/content-images/app-glyph-default-large.png" src="/images/content-images/app-glyph-default-large.png"
+                                                    alt="Three boxes in a square with grey background" onerror="handleImgError(this, 'large')">
+                                            </picture>
+                                        </div>
+                                        <div>
+                                            <span class="c-badge f-small f-highlight">BADGE</span>
+                                            <h3 class="c-heading" itemprop="product name">Heading</h3>
+                                            <div class="c-rating f-community-rated f-aggregate" itemscope itemtype="https://schema.org/Rating">
+                                                <p class="x-screen-reader">Rating:
+                                                    <span itemprop="ratingValue">4</span>/
+                                                    <span itemprop="bestRating">5</span>
+                                                </p>
+                                                <div aria-hidden="true">
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-full"></span>
+                                                    <span class="c-glyph f-none"></span>
+                                                </div>
+                                            </div>
+                                            <div class="c-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                                <meta itemprop="priceCurrency" content="USD">
+                                                <span>$</span>
+                                                <span itemprop="price">500</span>
+                                                <link itemprop="availability" href="http://schema.org/InStock">
+                                            </div>
+                                            <p class="c-paragraph">Lorem ipsum dolor sit amet.</p>
+                                        </div>
+                                    </a>
+                                </section>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+    <!-- Universal footer -->
+    <footer>
+        <section id="footerArea" role="Footer">
+            <div id="footerRegion" class="" data-region-key="footerregion">
+                <div id="footerUniversalFooter" data-module-id="Category|footerRegion|footerRegion|footerUniversalFooter|coreui-universalfooter">
+                    <footer class="c-universal-footer context-uhf" ms.pgarea="Uhf footer">
+                        <section><a id="locale-picker-link" class="c-hyperlink c-glyph glyph-world">English (United States)</a>
+                            <ul class="c-list f-bare" ms.cmpgrp="Corp links">
+                                <li>© Microsoft 2016</li>
+                            </ul>
+                        </section>
+                    </footer>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- JavaScript requirements -->
+    <!-- Include before </body>. Use the script file based on preference (UMD, AMD, CommonJS, Auto, etc.) -->
+    <script src="node_modules/requirejs/require.js"></script>
+    <script async="async" src="//assets.onestore.ms/cdnfiles/external/mwf/long/v1/v1.15.0/scripts/mwf-main.amd.min.js"></script>
+    <noscript></noscript>
+
+    <!-- JavaScript dependencies -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//assets.onestore.ms/cdnfiles/external/uhf/short/ci/js/uhf-main.var.min.js" async="" defer=""></script>
+
+    <!-- JavaScript additions -->
+    <!-- ... -->
+</body>
+
+</html>
